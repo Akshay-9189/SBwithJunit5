@@ -13,7 +13,8 @@
 
 ## Version Used
 
-1. Spring Boot - **3.0.4**
-2. MySql - **8.0.30**
-3. Hibernate - **6.1**
-4. Tomcat - **10.1**
+1. Java - **17.0.3.1**
+2. Spring Boot - **3.0.4**
+3. MySql - **8.0.30**
+4. Hibernate - **6.1.7**
+5. Tomcat - **10.1.5**
