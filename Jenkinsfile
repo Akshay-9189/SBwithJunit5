@@ -22,15 +22,11 @@ pipeline{
 
     post{
         success{
-            steps{
-                bat 'echo "----- Build Success -----"'
-            }
+            bat 'echo "----- Build Success -----"'
         }
 
         failure{
-            steps{
-                bat 'echo "----- Build Failed -----"'
-            }
+            bat 'echo "----- Build Failed -----"'
         }
     }
 }
