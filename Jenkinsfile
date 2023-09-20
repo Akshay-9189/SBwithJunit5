@@ -4,15 +4,21 @@ pipeline{
 
     stages{
         stage("Build"){
-            bat 'mvnw clean install -DskipTests'
+            steps{
+                bat 'mvnw clean install -DskipTests'
+            }
         }
 
         stage("Test"){
-            bat 'mvnw test'
+            steps{
+                bat 'mvnw test'
+            }
         }
 
         stage("Deploy"){
-            bat 'mvnw spring-boot:run'
+            steps{
+                bat 'mvnw spring-boot:run'
+            }
         }
     }
 }
