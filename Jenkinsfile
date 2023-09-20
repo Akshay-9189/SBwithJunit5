@@ -2,23 +2,28 @@ pipeline{
 
     agent any
 
+    tools{
+        maven 'Maven 3.9.4'
+        jdk 'jdk17'
+    }
+
     stages{
         stage("Build"){
             steps{
-                bat 'mvnw clean install -DskipTests'
+                bat 'mvn clean install -DskipTests'
             }
         }
 
         stage("Test"){
             steps{
-                bat 'mvnw test'
+                bat 'mvn test'
             }
         }
+    }
 
-        stage("Deploy"){
-            steps{
-                bat 'mvnw spring-boot:run'
-            }
+    post{
+        always{
+            echo 'Build Success'
         }
     }
 }
