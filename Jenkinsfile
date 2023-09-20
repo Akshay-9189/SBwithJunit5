@@ -21,8 +21,12 @@ pipeline{
     }
 
     post{
-        always{
-            echo 'Build Success'
+        success{
+            bat 'echo "----- Build Success -----"'
+        }
+
+        failure{
+            bat 'echo "----- Build Failed -----"'
         }
     }
 }
