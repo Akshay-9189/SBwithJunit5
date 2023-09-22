@@ -21,7 +21,7 @@ pipeline{
 
         stage("Deploy"){
             steps{
-                deploy adapters: [tomcat9(path: '', url: 'http://locahost:8080')], contextPath: null, war: '**/*.jar'
+                deploy adapters: [tomcat9(credentialsId: '49f7166e-bd60-4e0f-9c3c-438dda0bc195', path: '', url: 'http://localhost:8080/')], contextPath: null, onFailure: false, war: 'target/*.war'
             }
         }
     }
