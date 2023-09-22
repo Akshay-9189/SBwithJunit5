@@ -29,7 +29,6 @@ pipeline{
     post{
         success{
             bat 'echo ----- Build Success -----'
-            archiveArtifacts artifacts: 'target/*.war'
         }
 
         failure{
