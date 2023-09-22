@@ -12,7 +12,6 @@ pipeline{
                 bat 'mvn clean install -DskipTests'
             }
             post{
-                echo '==== Archiving the artifacts ===='
                 archiveArtifacts artifacts: '**/target/*.jar'
             }
         }
