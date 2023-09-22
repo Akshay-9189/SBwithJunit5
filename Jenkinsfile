@@ -11,9 +11,6 @@ pipeline{
             steps{
                 bat 'mvn clean install -DskipTests'
             }
-            post{
-                archiveArtifacts artifacts: '**/target/*.jar'
-            }
         }
 
         stage("Test"){
@@ -32,6 +29,7 @@ pipeline{
     post{
         success{
             bat 'echo ----- Build Success -----'
+            archiveArtifacts artifacts: '**/target/*.jar'
         }
 
         failure{
