@@ -29,7 +29,7 @@ pipeline{
     post{
         success{
             bat 'echo ----- Build Success -----'
-            archiveArtifacts artifacts: '**/target/*.jar'
+            archiveArtifacts artifacts: 'target/*.war'
         }
 
         failure{
