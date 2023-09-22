@@ -11,6 +11,7 @@
     <groupId>com.csi</groupId>
     <artifactId>SBJunit5</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
     <name>SBJunit5</name>
     <description>Spring Boot Project For Junit5 Test</description>
     <properties>
